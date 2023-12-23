@@ -1,2 +1,2 @@
 # GradesApplication
-Application for managing student grades
+This Java application is designed to efficiently manage student grades by allowing users to input student names, scores, and automatically calculate grades. Utilizes nested if statements for letter grades, loops for iterating through student data such as individual grades to find the average of their grades.  Updates might be made to this project as I gain more experience in java.
