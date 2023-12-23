@@ -7,19 +7,25 @@ class Grade{
         int subjects = input.nextInt();
         double[] grade = new double[subjects];
         for(int i =0; i<subjects; i++){
-            System.out.println("Enter subject " + (i+1) + " grade");
-            grade[i] = input.nextDouble();
+            do {
+                System.out.println("Enter subject " + (i + 1) + " grade");
+                grade[i] = input.nextDouble();
+                if(grade[i]>100){
+                    System.out.println("Not possible");
+                }
+            }while(grade[i]>100);
         }
         double sum = 0;
         for(int i =0; i<subjects; i++){
             sum += grade[i];
         }
         double avg = sum/subjects;
+        System.out.println("Courses grade: " + Arrays.toString(grade));
         System.out.println("Average : " +  sum/subjects);
         System.out.println("Grade : " + lettergrade(avg));
 
 
-        System.out.println(Arrays.toString(grade));
+
         return grade;
     }
 
